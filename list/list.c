@@ -23,7 +23,9 @@ int Insert_node(Nodep head,int value){
 	return 0;
 }
 
+int Delete_node(Nodep head,int n){
 	Nodep prev,cur;
+
 	for(cur = head,prev = NULL;cur != NULL,cur->value !=n;prev = cur,cur = cur->next);
 	prev->next = cur->next;
 	free(cur);
